@@ -1,0 +1,21 @@
+{
+  "name": "@tangible/codemirror",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "mkdir -p build && cd build && ln -sf ../vendor/* . && cd .. && tgb dev",
+    "build": "tgb build && cp node_modules/htmlhint/dist/htmlhint.min.js vendor && find vendor -type f -exec chmod 644 {} \\;",
+    "clean": "rm -rf build"
+  },
+  "dependencies": {
+    "@emmetio/codemirror-plugin": "^1.1.3",
+    "codemirror": "^5.55.0"
+  },
+  "devDependencies": {
+    "@tangible/builder": "1.x",
+    "csslint": "^1.0.5",
+    "htmlhint": "^0.14.1",
+    "jshint": "^2.11.1"
+  }
+}
