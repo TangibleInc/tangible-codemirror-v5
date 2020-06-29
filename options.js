@@ -19,8 +19,8 @@ const commonOptions = {
   lineNumbers: false,
   // styleActiveLine: true,
 
-  hint: {},
-  lint: {},
+  hint: false,
+  lint: true,
 
   matchBrackets: true,
   matchTags: true,
@@ -124,6 +124,9 @@ const languageOptions = {
     lint: {
       options: jsHintOptions
     }
+  },
+  json: {
+    mode: 'application/json',
   },
   php: {
     mode: 'application/x-httpd-php', // Was text/html

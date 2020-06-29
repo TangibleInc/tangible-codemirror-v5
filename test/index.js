@@ -20,3 +20,10 @@ createCodeMirror(
     language: 'javascript'
   }
 )
+
+createCodeMirror(
+  document.getElementById('json-editor'),
+  {
+    language: 'json'
+  }
+)
