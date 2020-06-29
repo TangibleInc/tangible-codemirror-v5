@@ -4,7 +4,7 @@ const {
   languageOptions
 } = require('./options')
 
-module.exports = function createCodeMirror(el, options = {}) {
+function createCodeMirror(el, options = {}) {
 
   const fn = el.tagName==='TEXTAREA' ? CodeMirror.fromTextArea : CodeMirror
 
@@ -38,3 +38,7 @@ module.exports = function createCodeMirror(el, options = {}) {
 
   return { CodeMirror, editor }
 }
+
+createCodeMirror.CodeMirror = CodeMirror
+
+module.exports = createCodeMirror

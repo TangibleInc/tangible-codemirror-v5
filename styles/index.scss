@@ -3,6 +3,9 @@
 // codemirror.css
 @import "./base.scss";
 
+// Try to keep changes here, so updating others will be easier
+@import "./custom.scss";
+
 // addon/dialog/dialog.css
 @import "./dialog.scss";
 

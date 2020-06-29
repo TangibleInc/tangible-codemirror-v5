@@ -39,11 +39,6 @@ module.exports = {
       src: 'lib/scsslint.js',
       dest: 'vendor/scsslint.min.js',
     },
-    {
-      task: 'js',
-      src: 'lib/jsonlint.js',
-      dest: 'vendor/jsonlint.min.js',
-    },
 
     // Test page
     {
