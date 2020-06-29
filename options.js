@@ -66,6 +66,7 @@ const jsHintOptions = {
   'es3'      : true,
   'expr'     : true,
   'immed'    : true,
+  'lastsemic': true,
   'noarg'    : true,
   'nonbsp'   : true,
   'onevar'   : true,
@@ -87,7 +88,7 @@ const jsHintOptions = {
 
 const languageOptions = {
   html: {
-    mode: 'text/html',
+    mode: 'application/x-httpd-php', // 'text/html'
     lint: {
       options: {
         rules: {
@@ -123,6 +124,9 @@ const languageOptions = {
     lint: {
       options: jsHintOptions
     }
+  },
+  php: {
+    mode: 'application/x-httpd-php', // Was text/html
   }
 }
 
