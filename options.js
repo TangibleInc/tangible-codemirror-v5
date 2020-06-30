@@ -16,7 +16,7 @@ const commonOptions = {
   //autofocus: true,
 
   gutters: ["CodeMirror-lint-markers"],
-  lineNumbers: false,
+  lineNumbers: true,
   // styleActiveLine: true,
 
   hint: false,
