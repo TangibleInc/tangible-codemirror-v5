@@ -1,6 +1,3 @@
-// Forked to export as window and/or module - See bottom
-// Original in /vendor/jsonlint.js
-
 /* Jison generated parser */
 var jsonlint = (function(){
 var parser = {trace: function trace() { },
@@ -20,7 +17,7 @@ case 1: // replace escaped characters with actual character
                      .replace(/\\v/g,'\v')
                      .replace(/\\f/g,'\f')
                      .replace(/\\b/g,'\b');
-
+        
 break;
 case 2:this.$ = Number(yytext);
 break;
@@ -344,7 +341,7 @@ next:function () {
         if (this._input === "") {
             return this.EOF;
         } else {
-            this.parseError('Lexical error on line '+(this.yylineno+1)+'. Unrecognized text.\n'+this.showPosition(),
+            this.parseError('Lexical error on line '+(this.yylineno+1)+'. Unrecognized text.\n'+this.showPosition(), 
                     {text: "", token: null, line: this.yylineno});
         }
     },
@@ -415,27 +412,21 @@ return lexer;})()
 parser.lexer = lexer;
 return parser;
 })();
-
-// TANGIBLE: CHANGED
-
-// if (typeof require !== 'undefined' && typeof exports !== 'undefined') {
-// exports.parser = jsonlint;
-// exports.parse = function () { return jsonlint.parse.apply(jsonlint, arguments); }
-// exports.main = function commonjsMain(args) {
-//     if (!args[1])
-//         throw new Error('Usage: '+args[0]+' FILE');
-//     if (typeof process !== 'undefined') {
-//         var source = require('fs').readFileSync(require('path').join(process.cwd(), args[1]), "utf8");
-//     } else {
-//         var cwd = require("file").path(require("file").cwd());
-//         var source = cwd.join(args[1]).read({charset: "utf-8"});
-//     }
-//     return exports.parser.parse(source);
-// }
-// if (typeof module !== 'undefined' && require.main === module) {
-//   exports.main(typeof process !== 'undefined' ? process.argv.slice(1) : require("system").args);
-// }
-// }
-
-if (typeof window!=='undefined') window.jsonlint = jsonlint
-if (typeof module!=='undefined' && module.exports) module.exports = jsonlint
+if (typeof require !== 'undefined' && typeof exports !== 'undefined') {
+exports.parser = jsonlint;
+exports.parse = function () { return jsonlint.parse.apply(jsonlint, arguments); }
+exports.main = function commonjsMain(args) {
+    if (!args[1])
+        throw new Error('Usage: '+args[0]+' FILE');
+    if (typeof process !== 'undefined') {
+        var source = require('fs').readFileSync(require('path').join(process.cwd(), args[1]), "utf8");
+    } else {
+        var cwd = require("file").path(require("file").cwd());
+        var source = cwd.join(args[1]).read({charset: "utf-8"});
+    }
+    return exports.parser.parse(source);
+}
+if (typeof module !== 'undefined' && require.main === module) {
+  exports.main(typeof process !== 'undefined' ? process.argv.slice(1) : require("system").args);
+}
+}
