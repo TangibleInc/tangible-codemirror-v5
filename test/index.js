@@ -3,14 +3,16 @@ import createCodeMirror from '../index'
 createCodeMirror(
   document.getElementById('html-editor'),
   {
-    language: 'html'
+    language: 'html',
+    resizable: 'vertical'
   }
 )
 
 createCodeMirror(
   document.getElementById('css-editor'),
   {
-    language: 'css'
+    language: 'css',
+    resizable: 'both'
   }
 )
 

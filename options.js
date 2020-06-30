@@ -129,7 +129,7 @@ const languageOptions = {
     mode: 'application/json',
   },
   php: {
-    mode: 'application/x-httpd-php', // Was text/html
+    mode: 'application/x-httpd-php',
   }
 }
 

@@ -10,6 +10,7 @@ function createCodeMirror(el, options = {}) {
 
   const {
     language = 'html',
+    resizable = false,
     ...passOptions
   } = options
 
@@ -17,6 +18,11 @@ function createCodeMirror(el, options = {}) {
     ...commonOptions,
     ...languageOptions[language],
     ...passOptions,
+    ...(
+      // If no vertical resize - .CodeMirror height: auto or 100%
+      !resizable || resizable==='horizontal' ?  { viewportMargin: Infinity }
+        : {}
+    )
   }
 
   let editor
@@ -36,9 +42,18 @@ function createCodeMirror(el, options = {}) {
 
   editor = fn(el, codeMirrorOptions)
 
-  return { CodeMirror, editor }
+  const $editor = editor.getWrapperElement()
+
+  if (resizable) {
+    $editor.style.resize = resizable===true ? 'vertical' : resizable // horizontal, both, none
+  }
+
+  editor.element = $editor
+
+  return editor
 }
 
+// For convenient access without calling create
 createCodeMirror.CodeMirror = CodeMirror
 
 module.exports = createCodeMirror
