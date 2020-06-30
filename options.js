@@ -94,13 +94,13 @@ const languageOptions = {
         rules: {
           "tagname-lowercase": false,
           "attr-lowercase": true,
-          "attr-value-double-quotes": true,
+          "attr-value-double-quotes": false,
           "doctype-first": false,
           "tag-pair": true,
           "spec-char-escape": true,
           "id-unique": true,
           "src-not-empty": true,
-          "attr-no-duplication": true,
+          "attr-no-duplication": false,
           csslint: cssLintOptions,
           jshint: jsHintOptions
         }
