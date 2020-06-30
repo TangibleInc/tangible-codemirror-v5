@@ -1,11 +1,12 @@
 {
   "name": "@tangible/codemirror",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "dev": "mkdir -p build && cd build && ln -sf ../vendor/* . && cd .. && tgb dev",
-    "build": "tgb build && cp node_modules/htmlhint/dist/htmlhint.min.js vendor && find vendor -type f -exec chmod 644 {} \\;",
+    "build": "tgb build",
+    "copy": "cp node_modules/htmlhint/dist/htmlhint.min.js vendor && cp node_modules/jsonlint/lib/jsonlint.js vendor && find vendor -type f -exec chmod 644 {} \\;",
     "clean": "rm -rf build"
   },
   "dependencies": {
