@@ -53,7 +53,10 @@ function createCodeMirror(el, options = {}) {
   return editor
 }
 
-// For convenient access without calling create
-createCodeMirror.CodeMirror = CodeMirror
+Object.assign(createCodeMirror, {
+  CodeMirror, // For convenient access without calling create
+  commonOptions,
+  languageOptions
+})
 
 module.exports = createCodeMirror
