@@ -11,7 +11,7 @@ const commonOptions = {
 
   spellcheck: false,
   //viewportMargin: Infinity, // With .CodeMirror height: auto or 100%
-  scrollbarStyle: 'simple',
+  // scrollbarStyle: 'simple',
 
   //autofocus: true,
 
