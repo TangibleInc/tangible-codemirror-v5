@@ -1,6 +1,6 @@
 {
   "name": "@tangible/codemirror",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -10,14 +10,14 @@
     "clean": "rm -rf build"
   },
   "dependencies": {
-    "@emmetio/codemirror-plugin": "^1.1.3",
-    "codemirror": "^5.55.0"
+    "@emmetio/codemirror-plugin": "^1.2.1",
+    "codemirror": "^5.57.0"
   },
   "devDependencies": {
     "@tangible/builder": "1.x",
     "csslint": "^1.0.5",
     "htmlhint": "^0.14.1",
-    "jshint": "^2.11.1",
+    "jshint": "^2.12.0",
     "jsonlint": "^1.6.3"
   }
 }
