@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@emmetio/codemirror-plugin": "^1.2.1",
-    "codemirror": "^5.57.0"
+    "codemirror": "^5.59.2"
   },
   "devDependencies": {
     "@tangible/builder": "1.x",
     "csslint": "^1.0.5",
-    "htmlhint": "^0.14.1",
+    "htmlhint": "^0.14.2",
     "jshint": "^2.12.0",
     "jsonlint": "^1.6.3"
   }
