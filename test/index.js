@@ -4,7 +4,14 @@ createCodeMirror(
   document.getElementById('html-editor'),
   {
     language: 'html',
-    resizable: 'vertical'
+    resizable: 'vertical',
+    emmet: {
+      config: {
+        html: {
+          test: 'test[type]'
+        }
+      }
+    }
   }
 )
 
