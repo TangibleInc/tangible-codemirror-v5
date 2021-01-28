@@ -86,25 +86,28 @@ const jsHintOptions = {
   }
 }
 
+const htmlLintOptions = {
+  // https://htmlhint.com/docs/user-guide/list-rules
+  rules: {
+    "attr-lowercase": false,
+    "attr-no-duplication": false,
+    "attr-value-double-quotes": false,
+    "doctype-first": false,
+    "id-unique": true,
+    "spec-char-escape": true,
+    "src-not-empty": true,
+    "tag-pair": true,
+    "tagname-lowercase": false,
+    csslint: cssLintOptions,
+    jshint: jsHintOptions
+  }
+}
+
 const languageOptions = {
   html: {
     mode: 'application/x-httpd-php', // 'text/html'
     lint: {
-      options: {
-        rules: {
-          "tagname-lowercase": false,
-          "attr-lowercase": true,
-          "attr-value-double-quotes": false,
-          "doctype-first": false,
-          "tag-pair": true,
-          "spec-char-escape": true,
-          "id-unique": true,
-          "src-not-empty": true,
-          "attr-no-duplication": false,
-          csslint: cssLintOptions,
-          jshint: jsHintOptions
-        }
-      }
+      options: htmlLintOptions
     }
   },
   css: {
