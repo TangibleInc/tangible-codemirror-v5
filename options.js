@@ -56,6 +56,12 @@ const cssLintOptions ={
   }
 }
 
+const sassLintOptions = {
+  rules: {
+    // https://github.com/sds/scss-lint/blob/master/lib/scss_lint/linter/README.md
+  }
+}
+
 const jsHintOptions = {
   // https://jshint.com/docs/options/
   'asi'      : true,
@@ -119,7 +125,7 @@ const languageOptions = {
   sass: {
     mode: 'text/x-scss',
     lint: {
-      options: cssLintOptions
+      options: sassLintOptions
     }
   },
   javascript: {

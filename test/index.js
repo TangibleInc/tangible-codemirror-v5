@@ -24,6 +24,14 @@ createCodeMirror(
 )
 
 createCodeMirror(
+  document.getElementById('sass-editor'),
+  {
+    language: 'sass',
+    resizable: 'both'
+  }
+)
+
+createCodeMirror(
   document.getElementById('javascript-editor'),
   {
     language: 'javascript'
