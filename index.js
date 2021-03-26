@@ -27,7 +27,8 @@ function createCodeMirror(el, options = {}) {
 
   let editor
 
-  if (language==='html') Object.assign(codeMirrorOptions.extraKeys, {
+  codeMirrorOptions.extraKeys = {
+    ...codeMirrorOptions.extraKeys,
     Tab: function(cm, ctx) {
 
       if (CodeMirror.commands.emmetExpandAbbreviation) {
@@ -37,8 +38,8 @@ function createCodeMirror(el, options = {}) {
 
       const spaces = Array(editor.getOption("indentUnit") + 1).join(" ")
       editor.replaceSelection(spaces)
-    },
-  })
+    }
+  }
 
   editor = fn(el, codeMirrorOptions)
 
