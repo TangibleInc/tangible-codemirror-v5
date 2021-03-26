@@ -86,8 +86,10 @@ const jsHintOptions = {
   'unused'   : true,
 
   'browser'  : true,
+  'devel'    : false, // Defines console, alert
 
   'globals': {
+    // Set "false" for read-only global variable
     '_'        : false,
     'Backbone' : false,
     'jQuery'   : false,
