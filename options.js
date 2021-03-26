@@ -52,13 +52,17 @@ const cssLintOptions ={
     'no-important': 0,
     'hex-notation': 0,
     'variable-for-property': 0,
-    'no-empty-rulesets': 1,
+    'no-empty-rulesets': 0,
   }
 }
 
 const sassLintOptions = {
   rules: {
     // https://github.com/sds/scss-lint/blob/master/lib/scss_lint/linter/README.md
+    'no-important': 0,
+    'hex-notation': 0,
+    'variable-for-property': 0,
+    'no-empty-rulesets': 0,
   }
 }
 
