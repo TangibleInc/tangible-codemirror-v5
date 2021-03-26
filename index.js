@@ -41,6 +41,14 @@ function createCodeMirror(el, options = {}) {
     }
   }
 
+  codeMirrorOptions.emmet = passOptions.emmet===false
+    ? false
+    : {
+      ...codeMirrorOptions.emmet,
+      ...(passOptions.emmet || {})
+    }
+
+
   editor = fn(el, codeMirrorOptions)
 
   const $editor = editor.getWrapperElement()

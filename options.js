@@ -38,6 +38,10 @@ const commonOptions = {
     'Enter': 'emmetInsertLineBreak',
     'Ctrl-Space': 'autocomplete'
   },
+
+  emmet: {
+    preview: false
+  }
 }
 
 const cssLintOptions ={
