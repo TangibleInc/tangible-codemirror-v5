@@ -86,7 +86,7 @@ const jsHintOptions = {
   'unused'   : true,
 
   'browser'  : true,
-  'devel'    : false, // Defines console, alert
+  'devel'    : true, // Defines console, alert
 
   'globals': {
     // Set "false" for read-only global variable
