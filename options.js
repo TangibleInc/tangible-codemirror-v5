@@ -124,7 +124,11 @@ const languageOptions = {
     mode: 'application/x-httpd-php', // 'text/html'
     lint: {
       options: htmlLintOptions
-    }
+    },
+
+    // For addon/edit/fold/xml-fold.js
+    foldGutter: true,
+    gutters: ["CodeMirror-lint-markers", "CodeMirror-linenumbers", "CodeMirror-foldgutter"],
   },
   css: {
     mode: 'text/css',
