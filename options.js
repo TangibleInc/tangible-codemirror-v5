@@ -25,7 +25,19 @@ const commonOptions = {
   matchBrackets: true,
   matchTags: true,
   autoCloseBrackets: true,
-  autoCloseTags: true,
+  autoCloseTags: {
+    // For addon/edit/closetag.js
+    indentTags: [
+      "applet", "blockquote", "body",
+      // "button",
+      // "div",
+      "dl", "fieldset", "form", "frameset",
+      // "h1", "h2", "h3", "h4", "h5", "h6",
+      "head", "html", "iframe", "layer", "legend", "object", "ol",
+      //"p",
+      "select", "table", "ul"
+    ]
+  },
 
   extraKeys: {
     "Alt-F": 'findPersistent',
