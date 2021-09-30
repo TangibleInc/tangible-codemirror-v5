@@ -18,6 +18,7 @@ const commonOptions = {
   gutters: ["CodeMirror-lint-markers"],
   lineNumbers: true,
   // styleActiveLine: true,
+  // lineWrapping: true,
 
   hint: false,
   lint: true,

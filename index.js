@@ -9,8 +9,7 @@
  * @see ./lib/codemirror/display/Display.js
  * @see ./styles
  *
- * Files in /addon and /lib/codemirror are based on version 5.63.1.
- * Files in /mode are from 5.55.0.
+ * Files in /addon, /lib/codemirror, and /mode are based on version 5.63.1.
  *
  * Run the following command (including the period) in a folder to see where
  * changes were made:
