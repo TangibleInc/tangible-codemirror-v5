@@ -45,6 +45,12 @@ module.exports = {
       dest: 'vendor/scsslint.min.js',
     },
 
+    // {
+    //   task: 'babel',
+    //   src: 'lib/codemirror-src/**/*.js',
+    //   dest: 'lib/codemirror',
+    // },
+
     // Test page
     {
       task: 'js',

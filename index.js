@@ -1,10 +1,14 @@
 /**
- * CodeMirror was forked to support a unique namespace: a single small
- * change in display/Display.js, to add a class .tangible-codemirror to the
- * wrapper element (d.wrapper).
+ * CodeMirror was forked to support a unique namespace.
  *
- * This allows for scoping the CSS, so our editor can co-exist with other instances
- * of CodeMirror.
+ * It's a small change in display/Display.js to add a class
+ * .tangible-codemirror to the wrapper element (d.wrapper).
+ *
+ * This allows for scoping the CSS, so our editor can co-exist with
+ * other instances of CodeMirror.
+ *
+ * If you run NPM script "copy", which copies the newest CodeMirror to
+ * /lib/codemirror-src for recompilation, make sure to re-apply the change.
  *
  * @see ./lib/codemirror/display/Display.js
  * @see ./styles
