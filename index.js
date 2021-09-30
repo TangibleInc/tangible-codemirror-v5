@@ -83,6 +83,21 @@ function createCodeMirror(el, options = {}) {
 
   editor.element = $editor
 
+  /**
+   * Make wrapped text line up with the base indentation of the line
+   * https://codemirror.net/demo/indentwrap.html
+   */
+
+  const charWidth = editor.defaultCharWidth()
+  const basePadding = 4
+
+  editor.on("renderLine", function(cm, line, elt) {
+    var off = CodeMirror.countColumn(line.text, null, cm.getOption("tabSize")) * charWidth
+    elt.style.textIndent = "-" + off + "px"
+    elt.style.paddingLeft = (basePadding + off) + "px"
+  })
+  editor.refresh()
+
   return editor
 }
 
