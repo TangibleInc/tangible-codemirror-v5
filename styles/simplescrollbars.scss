@@ -1,3 +1,7 @@
+
+// SCOPE >>>
+.tangible-codemirror {
+
 .CodeMirror-simplescroll-horizontal div, .CodeMirror-simplescroll-vertical div {
   position: absolute;
   background: #ccc;
@@ -63,4 +67,7 @@
 .CodeMirror-overlayscroll-vertical div {
   right: 0;
   width: 100%;
+}
+
+// <<< SCOPE
 }

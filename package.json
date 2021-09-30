@@ -10,8 +10,7 @@
     "clean": "rm -rf build"
   },
   "dependencies": {
-    "@emmetio/codemirror-plugin": "^1.2.4",
-    "codemirror": "^5.63.0"
+    "@emmetio/codemirror-plugin": "^1.2.4"
   },
   "devDependencies": {
     "@tangible/builder": "1.x",

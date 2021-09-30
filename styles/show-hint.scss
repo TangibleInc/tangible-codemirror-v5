@@ -1,3 +1,7 @@
+
+// SCOPE >>>
+.tangible-codemirror {
+
 .CodeMirror-hints {
   position: absolute;
   z-index: 10;
@@ -33,4 +37,7 @@
 li.CodeMirror-hint-active {
   background: #08f;
   color: white;
+}
+
+// <<< SCOPE
 }

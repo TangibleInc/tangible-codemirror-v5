@@ -1,9 +1,5 @@
-/* The lint marker gutter */
-.CodeMirror-lint-markers {
-  width: 16px;
-}
 
-.CodeMirror-lint-tooltip {
+.CodeMirror-lint-tooltip.cm-s-tangible-light {
   background-color: #ffd;
   border: 1px solid black;
   border-radius: 4px 4px 4px 4px;
@@ -23,6 +19,14 @@
   -webkit-transition: opacity .4s;
   -o-transition: opacity .4s;
   -ms-transition: opacity .4s;
+}
+
+// SCOPE >>>
+.tangible-codemirror {
+
+/* The lint marker gutter */
+.CodeMirror-lint-markers {
+  width: 16px;
 }
 
 .CodeMirror-lint-mark-error, .CodeMirror-lint-mark-warning {
@@ -70,4 +74,7 @@
   background-repeat: no-repeat;
   background-position: right bottom;
   width: 100%; height: 100%;
+}
+
+// <<< SCOPE
 }

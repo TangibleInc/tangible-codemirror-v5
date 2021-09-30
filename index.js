@@ -1,4 +1,25 @@
+/**
+ * CodeMirror was forked to support a unique namespace: a single small
+ * change in display/Display.js, to add a class .tangible-codemirror to the
+ * wrapper element (d.wrapper).
+ *
+ * This allows for scoping the CSS, so our editor can co-exist with other instances
+ * of CodeMirror.
+ *
+ * @see ./lib/codemirror/display/Display.js
+ * @see ./styles
+ *
+ * Files in /addon and /lib/codemirror are based on version 5.63.1.
+ * Files in /mode are from 5.55.0.
+ *
+ * Run the following command (including the period) in a folder to see where
+ * changes were made:
+ *
+ * grep -rHIn TANGIBLE .
+ */
+
 const CodeMirror = require('./lib/all')
+
 const {
   commonOptions,
   languageOptions
@@ -52,6 +73,12 @@ function createCodeMirror(el, options = {}) {
   editor = fn(el, codeMirrorOptions)
 
   const $editor = editor.getWrapperElement()
+
+  /**
+   * Add unique class to scope CSS - Now in forked CodeMirror to ensure
+   * correct styling calculations
+   */
+  // $editor.classList.add('tangible-codemirror')
 
   if (resizable) {
     $editor.style.resize = resizable===true ? 'vertical' : resizable // horizontal, both, none
