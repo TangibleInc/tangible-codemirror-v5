@@ -46,7 +46,8 @@ pre.CodeMirror-line-like {
 }
 
 .CodeMirror-guttermarker { color: black; }
-.CodeMirror-guttermarker-subtle { color: #999; }
+.CodeMirror-guttermarker-subtle { color: #bbb; }
+.CodeMirror-guttermarker-subtle:hover { color: #999; }
 
 /* CURSOR */
 
@@ -270,8 +271,8 @@ pre.CodeMirror-line-like {
   -webkit-font-variant-ligatures: contextual;
   font-variant-ligatures: contextual;
 }
-.CodeMirror-wrap pre.CodeMirror-line,
-.CodeMirror-wrap pre.CodeMirror-line-like {
+&.CodeMirror-wrap pre.CodeMirror-line,
+&.CodeMirror-wrap pre.CodeMirror-line-like {
   word-wrap: break-word;
   white-space: pre-wrap;
   word-break: normal;

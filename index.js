@@ -77,12 +77,6 @@ function createCodeMirror(el, options = {}) {
 
   const $editor = editor.getWrapperElement()
 
-  /**
-   * Add unique class to scope CSS - Now in forked CodeMirror to ensure
-   * correct styling calculations
-   */
-  // $editor.classList.add('tangible-codemirror')
-
   if (resizable) {
     $editor.style.resize = resizable===true ? 'vertical' : resizable // horizontal, both, none
   }
