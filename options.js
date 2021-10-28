@@ -80,6 +80,7 @@ const sassLintOptions = {
     'hex-notation': 0,
     'variable-for-property': 0,
     'no-empty-rulesets': 0,
+    'property-sort-order': 0,
   }
 }
 
@@ -122,7 +123,7 @@ const htmlLintOptions = {
     "attr-no-duplication": false,
     "attr-value-double-quotes": false,
     "doctype-first": false,
-    "id-unique": true,
+    "id-unique": false, // Dynamic tags can have non-unique "id" attributes
     "spec-char-escape": true,
     "src-not-empty": true,
     "tag-pair": true,
