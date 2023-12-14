@@ -1,78 +1,65 @@
 module.exports = {
   build: [
-
-    // // CodeMirror
-    // {
-    //   task: 'js',
-    //   src: 'global.js',
-    //   dest: 'build/codemirror.min.js',
-    //   watch: ['index.js']
-    // },
-    // {
-    //   task: 'sass',
-    //   src: 'styles.scss',
-    //   dest: 'build/codemirror.min.css',
-    //   watch: ['styles.scss']
-    // },
-
-    // // Theme
-    // {
-    //   task: 'sass',
-    //   src: 'themes/light.scss',
-    //   dest: 'build/codemirror-theme-light.min.css',
-    //   watch: ['themes/light.scss']
-    // },
+    // CodeMirror
+    {
+      src: 'tangible-codemirror/index.js',
+      dest: 'build/tangible-codemirror.min.js',
+      map: false,
+    },
+    {
+      src: 'tangible-codemirror/index.scss',
+      dest: 'build/tangible-codemirror.min.css',
+      map: false,
+    },
+    {
+      src: 'themes/light.scss',
+      dest: 'build/tangible-codemirror-theme-light.min.css',
+      map: false,
+    },
 
     // Minify vendor libraries
     {
-      task: 'js',
+      src: 'lib/htmlhint/index.js',
+      dest: 'vendor/htmlhint.min.js',
+      map: false
+    },
+    {
       src: 'lib/csslint.js',
       dest: 'vendor/csslint.min.js',
+      map: false
     },
     {
-      task: 'js',
       src: 'lib/jshint.js',
       dest: 'vendor/jshint.min.js',
+      map: false,
     },
     {
-      task: 'js',
       src: 'lib/jsonlint.js',
       dest: 'vendor/jsonlint.min.js',
+      map: false,
     },
     {
-      task: 'js',
       src: 'lib/scsslint.js',
       dest: 'vendor/scsslint.min.js',
+      map: false,
     },
-
-    // {
-    //   task: 'babel',
-    //   src: 'lib/codemirror-src/**/*.js',
-    //   dest: 'lib/codemirror',
-    // },
 
     // Test page
     {
-      task: 'js',
       src: 'test/index.js',
       dest: 'build/index.min.js',
-      watch: ['*.js', 'lib/**/*.js', 'modes/**/*.js', 'test/**/*.js']
     },
     {
-      task: 'sass',
       src: 'test/index.scss',
       dest: 'build/index.min.css',
-      watch: ['styles/**/*.scss', 'themes/**/*.scss', 'test/**/*.scss']
     },
     {
-      task: 'html',
       src: 'test/index.html',
       dest: 'build',
-      watch: 'test/index.html'
     },
   ],
   serve: {
-    src: 'build',
+    dir: 'build',
     port: 3000
   }
 }
